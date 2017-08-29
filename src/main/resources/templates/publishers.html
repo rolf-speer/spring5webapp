@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Spring Framework Guru</title>
+</head>
+<body>
+
+<h1>Publishers List</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    <!--/*@thymesVar id="publisher" type="guru.springframework.spring5webapp.model.Publisher"*/-->
+    <!--/*@thymesVar id="publishers" type="java.lang.Iterable<Publisher>"*/-->
+    <tr th:each="publisher : ${publishers}">
+        <td th:text="${publisher.id}"></td>
+        <td th:text="${publisher.name}"></td>
+        <td th:text="${publisher.address}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
